@@ -1,32 +1,144 @@
-body {
+html {
     height: 100%;
-    background: blue;
-    animation-name: appear;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-    animation-duration: 5s;
-    opacity: 1;
-}
-
-@keyframes appear {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-h1 {
-    left: 0px;
-    top: 0px;
-    font-size: 50px;
-    position: absolute;
+    width:100%;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background:linear-gradient(lightblue, white, lightblue);
+    overflow:hidden;
 }
 
 #logo {
-    left: 0px;
-    top: 0px;
+    left:0px; top:0px;
     width: 200px;
-    height: 00px;
+    height: 200px;
+    opacity: 1;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 3s;
+    transition-timing-function: linear;
+    animation-name: start;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: 10s;
 }
+
+#logo2 {
+    left:1400px; top:0px;
+    width: 200px;
+    height: 200px;
+    opacity: 1;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 3s;
+    transition-timing-function: linear;
+    animation-name: start2;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+}
+
+#logo:hover {
+  transform: translate(0, 300px);
+}
+#logo2:hover {
+  transform: translate(0, 300px);
+}
+
+@keyframes start {
+    0%   {left:650px; top:800px;}
+    25%  {left:650px; top:600px;transform:rotate(0deg)}
+    50%  {left:650px; top:600px; transform:rotate(360deg)}
+    75%  {left:650px; top:300px; transform: scale(1);}
+    85%  {left:650px; top:300px; transform: scale(4);}
+    100% {left:0px; top:0px;transform: scale(1);}
+}
+@keyframes start2 {
+    0%   {left:650px; top:800px;}
+    25%  {left:650px; top:600px;transform:rotate(0deg)}
+    50%  {left:650px; top:600px; transform:rotate(360deg)}
+    75%  {left:650px; top:300px; transform: scale(1);}
+    85%  {left:650px; top:300px; transform: scale(4);}
+    100% {left:1400px; top:0px;transform: scale(1);}
+}
+
+h1 {
+    left: 400px;
+    top: 0px;
+    font-size: 50px;
+    position: absolute;
+    animation-name: heading;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: 20s;
+}
+
+@keyframes heading {
+    0%   {left:400px; top:0px;opacity: 0;}
+    50%  {left:400px; top:300px;opacity: 0;}
+    75%  {left:400px; top:300px; transform: scale(2);opacity: 1;}
+    100% {left:400px; top:0px;transform: scale(1);}
+}
+
+h3 {
+    left: 600px;
+    top: 100px;
+    font-size: 50px;
+    position: absolute;
+    animation-name: heading2;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-duration: 35s;
+}
+
+@keyframes heading2 {
+    0%   {top:500px;transform: scale(0);opacity: 0;}
+    50%  {top:500px;opacity: 0;}
+    60%  {top:300px;opacity: 0;}
+    65%  {top:300px;transform: scale(1);opacity: 1;}
+    70%  {top:300px;transform: scale(2);opacity: 1;}
+    80%  {top:100px;transform: scale(2);opacity: 1;}
+    100% {top:100px;transform: scale(1);}
+}
+
+div {
+    left:50px; 
+    top:200px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    display: inline-block;
+    animation-name: imageStart;
+    animation-duration: 45s;
+    margin: 25px;
+    opacity: 1;
+    box-shadow: 5px red;
+}
+
+
+@keyframes imageStart {
+    0%   {left:500px; top:600px;opacity: 0;}
+    65%  {left:500px; top:600px;opacity: 0;}
+    70%  {left:50px; top:200px;opacity: 1;}
+    100% {left:50px; top:200px;opacity: 1;}
+}
+
+h2 {
+    left: 200px;
+    top: 450px;
+    font-size: 90px;
+    position: absolute;
+    animation-name: heading3;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-duration: 50s;
+}
+
+@keyframes heading3 {
+    0%   {top:300px;transform: scale(0);opacity: 0;}
+    75%   {top:300px;transform: scale(0);opacity: 0;}
+    80%  {top: 300px;transform: scale(1.5);opacity: 1;color: red;}
+    100% {top: 450px;transform: scale(1);}
+}
+
+
+
